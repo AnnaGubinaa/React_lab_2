@@ -24,12 +24,22 @@ const responsive = {
 };
 
 function App() {
+  const desiredCompetencesData = [
+    "Знание языка программирования PHP",
+    "Знание языков программирования и верстки HTML, CSS, и JavaScript на профессиональном уровне.",
+    "Знание основ работы с серверной частью приложения и взаимодействие с API.",
+    "Знание протоколов безопасности, таких как SSL и TLS, и как они обеспечивают защиту данных.",
+    "Умение работать с различными базами данных, такими как MySQL, PostgreSQL",
+    "Умение создавать адаптивный и красивый дизайн",
+    "Навык тестирования и отладки",
+    "Умение длительное времяконцентрироваться на работе",
+    "Навык внимательности при написании кода",
+    "Умение работать в Photoshop"
+  ];
 
 
   return (
     <>
-
-
       <ProfileCard />
       <h2 className='heading'>Мои компетенции:</h2>
       <MyCompetences title="HTML/CSS" text="Понимание основ работы с HTML/CSS" />
@@ -37,22 +47,14 @@ function App() {
       <MyCompetences title="JavaScript" text="Умение работать в Figma" />
       <MyCompetences title="JavaScript" text="Понимание основ работы с JavaScript" />
       <h2 className='heading'>Компетенции, которые планирую изучить:</h2>
+
       <Carousel responsive={responsive}>
-        <div><DesiredCompetences title="Знание языка программирования PHP" /></div>
-        <div><DesiredCompetences title="Знание языков программирования и верстки HTML, CSS, и JavaScript на профессиональном уровне." /></div>
-        <div><DesiredCompetences title="Знание основ работы с серверной частью приложения и взаимодействие с API." /></div>
-        <div><DesiredCompetences title="Знание протоколов безопасности, таких как SSL и TLS, и как они обеспечивают защиту данных." /></div>
-        <div><DesiredCompetences title="Умение работать с различными базами данных, такими как MySQL, PostgreSQL" /></div>
-        <div><DesiredCompetences title="Умение создавать адаптивный и красивый дизайн" /></div>
-        <div><DesiredCompetences title="Навык тестирования и отладки" /></div>
-        <div><DesiredCompetences title="Умение длительное времяконцентрироваться на работе" /></div>
-        <div><DesiredCompetences title="Навык внимательности при написании кода" /></div>
-        <div><DesiredCompetences title="Умение работать в Photoshop" /></div>
-
+        {desiredCompetencesData.map((title, index) => (
+          <div key={index}>
+            <DesiredCompetences title={title} />
+          </div>
+        ))}
       </Carousel>;
-
-
-
     </>
 
   );

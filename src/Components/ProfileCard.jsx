@@ -1,4 +1,4 @@
-import pic from "C:/Users/dom/Desktop/react-lab-2/src/Resources/photo.jpg"
+import pic from "../Resources/photo.jpg";
 function ProfileCard() {
     return (
         <div className="wrap">

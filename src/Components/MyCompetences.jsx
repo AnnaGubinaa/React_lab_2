@@ -1,4 +1,3 @@
-
 function MyCompetences(props) {
     return (
         <div className="cardWrapper">
